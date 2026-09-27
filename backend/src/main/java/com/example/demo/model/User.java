@@ -23,11 +23,19 @@ public class User {
     private String password;
 
     @Column(nullable = false)
+    private String fullName;
+
+    @Column(nullable = false)
+    private String phoneNumber;
+
+    @Column(nullable = false)
     private String role;
 
-    public User(String email, String password, String role){
+    public User(String email, String password, String fullName, String phoneNumber, String role){
         this.email = email;
         this.password = password;
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
         this.role = role;
     }
 }

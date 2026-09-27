@@ -42,6 +42,7 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/auth/**"
                         ).permitAll()
+                        .requestMatchers("/resume/**").authenticated()
                         .anyRequest().authenticated()
                 )
 
